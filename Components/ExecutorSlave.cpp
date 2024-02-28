@@ -42,15 +42,14 @@ void ExecutorSlave::processPacket(unique_ptr<Packet> packet) {
     printf("Executor Slave stole packet of size %zu and data = \"%s\"\n\n", packet->packet->dataLength, packet->packet->data);
 
 
-    if(packet->label == "")
-    // TODO: determine output actions:
-    //  (1) DMG initially requesting Game Files --> Forward AssetManager MicroService contact information
-    //  (2) Player requesting to join game --> Authenticate via Auth MicroService(blocking ??? ) & pass newest GameServer info
-    //  (3) Malicious request --> Blacklist the requestor's MAC Address & IP and push to other MircoServ via DB
-    //  ... More ?
+    if(packet->label == ""){
+        // TODO: determine output actions:
+        //  (1) DMG initially requesting Game Files --> Forward AssetManager MicroService contact information
+        //  (2) Player requesting to join game --> Authenticate via Auth MicroService(blocking ??? ) & pass newest GameServer info
+        //  (3) Malicious request --> Blacklist the requestor's MAC Address & IP and push to other MircoServ via DB
+        //  ... More ?
 
-    //TODO:
-
-
+        //TODO:
+    }
 
 }
